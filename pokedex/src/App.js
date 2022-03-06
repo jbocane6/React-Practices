@@ -1,13 +1,13 @@
-import React, { Component } from 'react';
+import React from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+import AppNavigator from './components/AppNavigator'
+import Pokedex from './containers/Pokedex'
 
-class App extends Component {
-  render() {
-    return (
-      <div>
-        
-      </div>
-    );
-  }
+export default function App() {
+  return (
+    <Router>
+      <AppNavigator />
+      <Route path="/" component={Pokedex} />
+    </Router>
+  )
 }
-
-export default App;
